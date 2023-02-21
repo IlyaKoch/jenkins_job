@@ -1,23 +1,23 @@
-package test.simple;
+package tests.simple;
 
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
-public class NegativeTest {
+public class PositiveTest {
     @Test
     void test0(){
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test
     void test1(){
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test
     void test2(){
-        assertTrue(false);
+        assertTrue(true);
     }
 
 }

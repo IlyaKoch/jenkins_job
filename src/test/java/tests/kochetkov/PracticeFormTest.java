@@ -1,7 +1,8 @@
-package com.kochetkov;
+package tests.kochetkov;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;

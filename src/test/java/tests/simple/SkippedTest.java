@@ -1,4 +1,4 @@
-package test.simple;
+package tests.simple;
 
 import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
@@ -9,19 +9,18 @@ public class SkippedTest {
     @Test
     @Disabled
     void test0(){
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test
     @Disabled
     void test1(){
-        assertTrue(false);
+        assertTrue(true);
     }
 
     @Test
     @Disabled
     void test2(){
-        assertTrue(false);
+        assertTrue(true);
     }
-
 }
