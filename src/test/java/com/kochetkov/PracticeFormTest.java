@@ -1,7 +1,5 @@
 package com.kochetkov;
 
-import com.codeborne.selenide.Configuration;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -11,14 +9,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
-public class PracticeFormTest {
-
-    @BeforeAll
-    static void beforeAll() {
-        Configuration.browserSize = "2100x1080";
-        Configuration.baseUrl = "https://demoqa.com";
-    }
-
+public class PracticeFormTest extends TestBase {
     @Test
     @DisplayName("Тест успешного заполнения формы")
     void formTest() {
@@ -40,7 +31,7 @@ public class PracticeFormTest {
             $("#state").click();
             $("#stateCity-wrapper").$(byText("NCR")).click();
             $("#city").click();
-            $("#stateCity-wrapper").$(byText("Noida")).click();
+            $("#stateCity-wrapper").$(byText("Delhi")).click();
             $("#submit").click();
         });
         step("Check text in the pop-up window", () -> {
@@ -58,7 +49,7 @@ public class PracticeFormTest {
                     text("Music"),
                     text("Samara Novo-Sadovaya"),
                     text("NCR"),
-                    text("Noida"));
+                    text("Delhi"));
         });
     }
 }
