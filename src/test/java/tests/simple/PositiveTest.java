@@ -19,5 +19,4 @@ public class PositiveTest {
     void test2(){
         assertTrue(true);
     }
-
 }
