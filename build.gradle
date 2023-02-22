@@ -51,10 +51,15 @@ task properties_tests(type: Test) {
     }
 }
 
+task owner_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "Owner"
+    }
+}
+
 task many_tags_tests(type: Test) {
     useJUnitPlatform {
         includeTags "properties"
-        includeTags "smoke"
-        includeTags "prod"
+        includeTags "Owner"
     }
 }
