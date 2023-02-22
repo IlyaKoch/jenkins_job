@@ -1,6 +1,7 @@
 package tests.kochetkov;
 
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import tests.TestBase;
 
@@ -10,6 +11,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
 import static io.qameta.allure.Allure.step;
 
+@Tag("Owner")
 public class PracticeFormTest extends TestBase {
     @Test
     @DisplayName("Тест успешного заполнения формы")
