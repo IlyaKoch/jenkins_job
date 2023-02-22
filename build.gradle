@@ -30,6 +30,30 @@ tasks.withType(JavaCompile) {
     options.encoding = 'UTF-8'
 }
 
-test {
+tasks.withType(Test) {
+//    systemProperty("environment", System.getProperty("environment", "test1"))
+    systemProperties(System.getProperties())
     useJUnitPlatform()
+
+    testLogging {
+        lifecycle {
+            events "STARTED", "FAILED", "STANDARD_ERROR", "STANDARD_OUT"
+            exceptionFormat "short"
+        }
+    }
+}
+
+task properties_tests(type: Test) {
+//    systemProperty("browserSize", System.getProperty("browserSize", "300x300"))
+    useJUnitPlatform {
+        includeTags "properties"
+    }
+}
+
+task many_tags_tests(type: Test) {
+    useJUnitPlatform {
+        includeTags "properties"
+        includeTags "smoke"
+        includeTags "prod"
+    }
 }
