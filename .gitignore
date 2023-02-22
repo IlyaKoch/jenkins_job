@@ -10,6 +10,9 @@
 # Mobile Tools for Java (J2ME)
 .mtj.tmp/
 
+# Properties Files #
+*.properties
+
 # Package Files #
 *.jar
 *.war
@@ -31,7 +34,6 @@ bin/
 out/
 logs/
 target/
-/src/test/resources/config/
 .classpath
 .project
 .settings/org.eclipse.buildship.core.prefs
